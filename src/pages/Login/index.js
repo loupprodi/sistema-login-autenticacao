@@ -37,8 +37,6 @@ export const Login = () => {
     return validarEmail(form.email) && validarSenha(form.password);
   };
 
-  console.log("Form esta valido", validadorInput());
-
   return (
     <Container>
       <Form>
