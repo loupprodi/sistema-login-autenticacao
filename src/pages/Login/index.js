@@ -2,18 +2,27 @@ import React, { useState } from "react";
 import { Container, Form } from "./styles";
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
-
 import { validarEmail, validarSenha } from "../../utils/validadores";
+import UserService from "../../services/UserService";
+import { navigate, useNavigate } from "react-router-dom";
+
+const userService = new UserService();
 
 export const Login = () => {
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState([]);
+  const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
       setLoading(true);
-      alert("Login");
+      const response = await userService.login(form);
+      console.log("response do login", response);
+      if (response === true) {
+        alert("usuario logado com sucesso");
+        navigate("/home");
+      }
       setLoading(false);
     } catch (error) {
       alert("Algo deu errado com o login" + error);
@@ -21,9 +30,7 @@ export const Login = () => {
   };
 
   const handleChange = (event) => {
-    console.log("Digitando...", event.target.name, event.target.value);
     setForm({ ...form, [event.target.name]: event.target.value });
-    console.log("Form", form);
   };
 
   const validadorInput = () => {

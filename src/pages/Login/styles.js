@@ -20,10 +20,9 @@ export const Form = styled.form`
   width: 100%;
   max-width: 450px;
   gap: 30px 0px;
-
   h1 {
     color: white;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: light;
   }
   p {
