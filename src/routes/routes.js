@@ -14,8 +14,7 @@ export const Routering = () => {
         path="/home"
         element={
           <ProtectedRoutes>
-            <h1>Children</h1>
-            {/* <HomePage /> */}
+            <HomePage />
           </ProtectedRoutes>
         }
       />

@@ -4,7 +4,7 @@ import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
 import { validarEmail, validarSenha } from "../../utils/validadores";
 import UserService from "../../services/UserService";
-import { navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const userService = new UserService();
 
@@ -61,7 +61,7 @@ export const Login = () => {
         />
         <div>
           <p>Não possui conta?</p>
-          <a>Cadastrar</a>
+          <Link>Cadastrar</Link>
         </div>
       </Form>
     </Container>
