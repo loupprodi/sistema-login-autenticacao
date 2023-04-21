@@ -9,7 +9,7 @@ export const Routering = () => {
   return (
     <Routes>
       <Route path="*" element={<Login />} />
-      <Route path="/cadastro" element={<SignUp />} />
+      <Route path="/cadastrar" element={<SignUp />} />
       <Route
         path="/home"
         element={

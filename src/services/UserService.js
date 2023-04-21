@@ -17,6 +17,11 @@ export default class UserServices {
     }
     return;
   };
+
+  cadastrar = async (dados) => {
+    return this.axios.post("/user", dados);
+  };
+
   usuarioAutenticado = () => {
     return localStorage.getItem("token") != undefined ? true : false;
   };

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Form } from "./styles";
+import { Container, Form, SubContainerSing } from "./styles";
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
 import { validarEmail, validarSenha } from "../../utils/validadores";
@@ -59,10 +59,10 @@ export const Login = () => {
           onClick={handleSubmit}
           disabled={loading === true || !validadorInput()}
         />
-        <div>
+        <SubContainerSing>
           <p>Não possui conta?</p>
-          <Link>Cadastrar</Link>
-        </div>
+          <Link to="cadastrar">Cadastrar</Link>
+        </SubContainerSing>
       </Form>
     </Container>
   );
