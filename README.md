@@ -23,13 +23,12 @@ Este projeto foi desenvolvido com finalidade de estudo para autenticação de um
   - [visual studio code](https://code.visualstudio.com/)
   Comandos:
   -yarn install || yarn
-  -yarn serve
   -yarn add react-router-dom
   -npm install --save styled-components
   
   Obs: Em caso de duvida veja o script no package.json
   caso queira fazer por si mesmo e adicione as dependencias:
-  -vue create project
+  -npx create-react-app sistema-login-autenticacao
 
 ## Tecnologias utilizada
 ReactJs
